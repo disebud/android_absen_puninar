@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#eeeeee"
+    android:layout_height="match_parent"
+    tools:context=".view.CheckAbsensi">
+
+    <TextView
+        android:id="@+id/historyAbsen"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HISTORY ABSEN"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:id="@+id/lnLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/historyAbsen"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_puninar"
+            android:background="@color/white"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/tglAbsen"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STATUS ABSEN"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ln3"
+        android:layout_below="@+id/lnLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        >
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPresensi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_presensi" />
+
+        <TextView
+            android:id="@+id/not_found"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATA TIDAK TERSEDIA"
+            android:textAllCaps="true"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/caviardreams"
+            android:textColor="#000000"
+            android:letterSpacing="0.02"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

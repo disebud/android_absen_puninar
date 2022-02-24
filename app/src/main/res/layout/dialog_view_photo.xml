@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewPhotoNeh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_8sdp"
+    >
+
+    <TextView
+        android:id="@+id/detailSelfie"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DETAIL PHOTO"
+        android:fontFamily="@font/caviardreams"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"/>
+
+    <ImageView
+        android:layout_below="@+id/detailSelfie"
+        android:id="@+id/dialog_crime_image"
+        android:layout_width="match_parent"
+        android:src="@drawable/no_image"
+        android:layout_height="match_parent"
+        android:layout_above="@id/logout"/>
+
+    <Button
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/logout"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F44336"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:text="CLOSE"/>
+
+
+
+</RelativeLayout>

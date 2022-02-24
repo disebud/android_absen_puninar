@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#eeeeee"
+    android:layout_height="match_parent"
+    tools:context=".view.CheckAbsensi">
+
+    <TextView
+        android:id="@+id/statusAbsen"
+        android:gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="STATUS ABSEN"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:id="@+id/lnLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/statusAbsen"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_puninar"
+            android:background="@color/white"
+            android:padding="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/tglAbsen"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STATUS ABSEN"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/photoRV"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/lnLogo"
+        android:layout_gravity="center"
+        android:background="@drawable/frame"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusAbsen">
+
+        <ImageView
+            android:id="@+id/noimg1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@drawable/no_image"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/foto_selfie"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:onClick="actionView"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/frame_outline"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_image" />
+
+        <ImageView
+            android:id="@+id/capture_foto_selfie"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/circlefull"
+            android:padding="15dp"
+            android:onClick="actionView"
+            android:src="@drawable/photo"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="10dp"
+            android:background="#FF9800"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="Selfie Photo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/photoRV">
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DETAIL LOCATION"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:background="#FF5722"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LATITUDE"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:background="#FF9800"
+                android:textColor="@color/white"/>
+
+            <View
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LONGITUDE"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:background="#FF9800"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_outline"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/valLat"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LATITUDE"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+            <TextView
+                android:id="@+id/valLong"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LONGITUDE"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"
+                android:textSize="@dimen/_15sdp"
+                android:background="#FF9800"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_outline"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/valAddress"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LATITUDE"
+                android:fontFamily="@font/caviardreams"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:padding="@dimen/_5sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/save_status"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:onClick="actionView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:backgroundTint="#F44336"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:text="SAVE"/>
+
+</RelativeLayout>
